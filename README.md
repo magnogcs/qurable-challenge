@@ -9,11 +9,11 @@ REACT_APP_API_PORT=3000
 REACT_APP_API_URL=http://localhost:5000/api
 ```
 
+`Warning: Check if the API port is correct`
+
 Start backend
 
-```
-Start api from repo:
-```
+- Configure and follow the instructions from repo: https://github.com/magnogcs/qurable-challenge-api
 
 ### Start application
 
