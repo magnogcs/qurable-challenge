@@ -1,0 +1,17 @@
+.root {
+  background-color: #f6f6f6;
+  min-height: 100vh;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+@font-face {
+  font-family: "Arameza";
+  src: local("Arameza"), url(/assets/fonts/LaMango-Light.otf) format("opentype");
+}
+
+.teste {
+  color: red !important;
+}

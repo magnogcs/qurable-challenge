@@ -1,0 +1,12 @@
+{
+  "id": "3245",
+  "name": "Inocencia",
+  "description": "Proident in nulla duis irure Lorem aliquip laborum voluptate esse irure culpa adipisicing pariatur nisi. Nostrud mollit id elit in consectetur commodo minim cillum nulla officia do. Minim tempor consectetur sit aliquip do eiusmod Lorem velit tempor ex sint. Reprehenderit consequat ullamco deserunt cupidatat velit consequat qui adipisicing sit magna Lorem exercitation. Elit ut ut velit mollit ipsum dolore id enim esse dolor labore ullamco eu. Amet nostrud consectetur do minim in nulla sint et officia dolore enim deserunt velit. Aliquip adipisicing culpa reprehenderit pariatur qui irure dolor fugiat labore proident est ipsum cillum.\r\n",
+  "price": 1234.56,
+  "image": "http://localhost:3000/assets/product-image.jpg",
+  "creator": {
+    "creator_id": 101,
+    "creator_name": "El Burgues",
+    "creator_image": "http://localhost:3000/assets/creator-3.png"
+  }
+}

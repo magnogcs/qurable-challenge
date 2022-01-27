@@ -1,0 +1,42 @@
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - rm -rf build
+
+build:
+  stage: build
+  image: node:12.9.1
+  only: 
+    - master
+  script:
+    - echo "Start building application"
+    - CI=false npm install
+    - CI=false npm run build
+    - echo "Done."
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - build
+
+deploy:
+  stage: deploy
+  image: alpine
+  only: 
+    - master
+  before_script:
+    - echo "Deploying application"
+    - apk add openssh-client
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - scp -P $SSH_PORT -r build/* $SSH_USER@$SSH_HOST:$DEPLOY_DIR
+    - echo "Done."

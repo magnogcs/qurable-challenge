@@ -1,0 +1,35 @@
+.root {
+  border-bottom: 1px solid #d1d1d1;
+  padding: 0.5rem;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.root img {
+  width: 50px;
+}
+
+.active {
+  color: #d99803 !important;
+}
+
+.menu li {
+  display: inline;
+  padding-right: 3rem;
+  font-weight: bold;
+}
+
+.menu ul {
+  align-items: center;
+  display: flex;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black; /* before rgb(11, 62, 95);  */
+  /* text-transform: uppercase; */
+}
+
+.menu a:hover {
+  color: #d99803;
+}
